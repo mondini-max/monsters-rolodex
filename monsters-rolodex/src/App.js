@@ -1,5 +1,8 @@
 import { Component } from 'react';
+
 import './App.css';
+import { CardList } from './components/card-list/card-list.component';
+import { SearchBox } from './components/search-box/search-box.component';
 
 class App extends Component {
   constructor() {
@@ -20,7 +23,7 @@ class App extends Component {
             return { monsters: users };
           },
           () => {
-            console.log(this.state);
+            // console.log(this.state);
           }
         );
       });
@@ -36,20 +39,22 @@ class App extends Component {
   render() {
     const { monsters, searchField } = this.state;
     const { onSearchChangeHandler } = this;
+
     const filteredMonsters = monsters.filter((monster) => {
       return monster.name.toLocaleLowerCase().includes(searchField);
     });
+
     return (
       <div className='App'>
-        <input
+        <SearchBox onSearchChangeHandler={onSearchChangeHandler} />
+        {/* <input
           type='search'
           className='search-box'
           placeholder='search monsters'
           onChange={onSearchChangeHandler}
-        />
-        {filteredMonsters.map((monster) => {
-          return <p key={monster.id}>{monster.name}</p>;
-        })}
+        /> */}
+
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   }
