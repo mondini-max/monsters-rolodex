@@ -8,7 +8,7 @@ export class Card extends Component {
       <Fragment>
         <div key={id} className={cardStyles.cardContainer}>
           <img
-            src={`https://robohash.org/${id}?set=set2`}
+            src={`https://robohash.org/${id}?set=set2&size=180x180`}
             alt={`monster ${name}`}
           />
           <h2>{name}</h2>
