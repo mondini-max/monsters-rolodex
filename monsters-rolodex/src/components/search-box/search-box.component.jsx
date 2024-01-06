@@ -11,7 +11,7 @@ export class SearchBox extends Component {
             id='searchBox'
             className={`${this.props.className}`}
             placeholder={this.props.placeholder}
-            onChange={this.props.onSearchChangeHandler}
+            onChange={this.props.onChangeHandler}
           />
         </label>
       </Fragment>
