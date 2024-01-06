@@ -1,16 +1,18 @@
 import { Component, Fragment } from 'react';
+import './card-list.style.css';
+import { Card } from '../card/card.component';
 
 export class CardList extends Component {
   render() {
     const { monsters } = this.props;
     return (
       <Fragment>
-        {monsters.map((monster) => (
-          <div key={monster.id}>
-            <h2>{monster.name}</h2>
-          </div>
-        ))}
-        <div></div>
+        <div className='card-list'>
+          {monsters.map((monster) => {
+            const { name, email, id } = monster;
+            return <Card key={id} id={id} name={name} email={email} />;
+          })}
+        </div>
       </Fragment>
     );
   }

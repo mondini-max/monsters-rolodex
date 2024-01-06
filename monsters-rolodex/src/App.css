@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne&family=Yantramanav&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Syne', sans-serif;
+  font-family: 'Yantramanav', sans-serif;
+
+  text-align: center;
+  background-image: linear-gradient(
+    to left top,
+    #976023,
+    #b14939,
+    #ba3362,
+    #a53795,
+    #5c52c4
+  );
+}
+
+.app-title {
+  margin-top: 75px;
+  margin-bottom: 50px;
+  font-size: 76px;
+  color: #88d181;
+  font-family: 'Bigelow Rules', serif;
+}
