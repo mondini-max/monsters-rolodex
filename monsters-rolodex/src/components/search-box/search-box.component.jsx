@@ -8,8 +8,8 @@ export class SearchBox extends Component {
           <input
             type='search'
             id='searchBox'
-            className='search-box'
-            placeholder='search monsters'
+            className={this.props.className}
+            placeholder={this.props.placeholder}
             onChange={this.props.onSearchChangeHandler}
           />
         </label>
